@@ -1,3 +1,10 @@
+
+@font-face {
+    font-family: 'Exo Light Italic';
+    src: url('Exo-Light-Italic.otf') format('opentype');
+}
+
+
 .video-header {
   position: relative;
   height: 100vh;
@@ -23,6 +30,7 @@
 }
 
 .Linehan-Family-Text {
+  font-family: 'Exo Regular Italic', sans-serif;
   position: absolute;
   top: 65%;
   left: 50%;
@@ -33,6 +41,7 @@
 }
 
 .contact-info {
+  font-family: 'Exo Regular Italic', sans-serif;
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -41,11 +50,13 @@
 }
 
 h1 {
+  font-family: 'Exo Regular Italic', sans-serif;
   margin: 0;
   font-size: 3em;
 }
 
 h5 {
+  font-family: 'Exo Regular Italic', sans-serif;
   margin: 0;
   font-size: 1em;
 }
