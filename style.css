@@ -1,9 +1,7 @@
-
 @font-face {
-    font-family: 'Exo Light Italic';
-    src: url('Exo-Light-Italic.otf') format('opentype');
+  font-family: 'Exo Light Italic';
+  src: url('Exo-Light-Italic.otf') format('opentype');
 }
-
 
 .video-header {
   position: relative;
@@ -22,11 +20,18 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
+  width: 100%;
   height: auto;
+  max-height: 100%;
+  object-fit: contain;
   transform: translate(-50%, -50%);
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  max-width: 300px;
 }
 
 .Linehan-Family-Text {
@@ -59,4 +64,27 @@ h5 {
   font-family: 'Exo Light Italic', sans-serif;
   margin: 0;
   font-size: 1em;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .Linehan-Family-Text {
+    font-size: 2em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h5 {
+    font-size: 0.8em;
+  }
+
+  .logo {
+    max-width: 200px;
+  }
+
+  .contact-info {
+    font-size: 0.8em;
+  }
 }
