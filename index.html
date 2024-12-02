@@ -1,42 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Linehan Family Foundation | Supporting Baltimore Communities</title>
-  <meta name="description" content="The Linehan Family Foundation is dedicated to supporting communities in Baltimore through various initiatives and programs.">
-  <meta name="keywords" content="Linehan Family Foundation, Baltimore, community support, nonprofit, charitable foundation">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linehan Family Foundation | Supporting Baltimore Communities</title>
+    <meta name="description" content="The Linehan Family Foundation is dedicated to supporting communities in Baltimore through various initiatives and programs.">
+    <meta name="keywords" content="Linehan Family Foundation, Baltimore, community support, nonprofit, charitable foundation">
+ 
+
+
+    <style>
+        /* Decided to embed css to save space and allow the site to be deployed with a single file */
+        html, body {
+            height: 100%; /* Ensure full height */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .video-header {
+            position: relative;
+            height: 100vh; /* Full viewport height */
+            width: 100vw; /* Full viewport width */
+            overflow: hidden;
+        }
+
+        .video-container {
+            position: absolute; /* Position absolute to fill the header */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%; /* Fill the container */
+            object-fit: cover; /* Ensures the video covers the container */
+            transform: translate(-50%, -50%);
+        }
+
+        .center-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.2); /* Semi-transparent background for readability, text was hard to read otherwise */
+            padding: 10px; /* Padding for better spacing */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        .center-image {
+            max-width: 80%; /* Increased size for mobile */
+            height: auto;
+        }
+
+        .contact-info {
+            font-family: 'Exo Light Italic', sans-serif;
+            margin-top: 10px; /* Adjusted margin */
+        }
+
+        h5 {
+            font-family: 'Exo Light Italic', sans-serif;
+            margin: 0;
+            font-size: 0.9em; /* Adjusted size for better readability */
+        }
+
+        /* Copyright at the bottom */
+        footer {
+            position: fixed;
+            bottom: 10px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            color: white; /* Change color as needed */
+            font-size: 0.8em; /* Adjust font size */
+            text-align: center; /* Center the text */
+            padding: 5px; /* Add padding */
+            width: 100%; /* Full width */
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .center-image {
+                max-width: 90%; /* Slightly larger on smaller screens */
+            }
+
+            h5 {
+                font-size: 0.9em; /* Adjusted size */
+            }
+
+            .contact-info {
+                font-size: 0.8em; /* Adjusted size */
+            }
+
+            footer {
+                font-size: 0.7em; /* Smaller font size for mobile */
+                padding: 10px; /* More padding for mobile */
+            }
+        }
+
+        /* Media query for landscape orientation */
+        @media (orientation: landscape) {
+            #bg-video {
+                /* Ensure video fills the screen in landscape */
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <!-- Header section -->
-  <header class="video-header">
-    <div class="video-container">
-      <!-- Background video -->
-      <video autoplay muted loop playsinline id="bg-video" alt="Aerial view of Inner Harbor and city skyline at sunrise in Baltimore, Maryland, USA. licensed from Shutterstock by the Linehan foundation">
-        <source src="video.mp4" type="video/mp4">
-      </video>
-    </div>
-    <!-- Centered content -->
-    <div class="center-content">
-      <img src="image.png" alt="Linehan Family Foundation Logo" class="center-image">
-      <!-- Contact info -->
-      <div class="contact-info">
-        <h5><a href="mailto:info@linehanfdn.org">info@linehanfdn.org</a></h5>
-      </div>
-    </div>
-  </header>
+    <!-- Header section -->
+    <header class="video-header">
+        <div class="video-container">
+            <!-- Background video -->
+            <video autoplay muted loop playsinline id="bg-video" alt="Aerial view of Inner Harbor and city skyline at sunrise in Baltimore, Maryland, USA. licensed from Shutterstock by the Linehan foundation" loading="lazy">
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- Centered content -->
+        <div class="center-content">
+            <img src="image.png" alt="Linehan Family Foundation Logo" class="center-image">
+            <!-- Contact info -->
+            <div class="contact-info">
+                <h5><a href="mailto:info@linehanfdn.org">info@linehanfdn.org</a></h5>
+            </div>
+        </div>
+    </header>
 
-  <!-- Main content section -->
-  <main>
-  </main>
-
-  <!-- Footer section -->
-  <footer>
-    <p>&copy; 2024 Linehan Family Foundation. All rights reserved.</p>
-  </footer>
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Linehan Family Foundation. All rights reserved.</p>
+    </footer>
 </body>
-
-</html>
+</html> 
